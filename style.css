@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,6 +10,7 @@ body {
     background-color: white;
 }
 
+/* Header */
 .container {
     display: flex;
     justify-content: space-between;
@@ -56,8 +58,7 @@ nav {
     text-align: center;
 }
 
-a.login,
-a.signup {
+a.login, a.signup {
     background-color: #001166;
     padding: 10px;
     border-radius: 5px;
@@ -70,14 +71,13 @@ a.signup {
     border-bottom: 3px solid #001166;
 }
 
-a.login:hover,
-a.signup:hover {
+a.login:hover, a.signup:hover {
     background-color: white;
     color: #001166;
 }
 
 .menu-toggle {
-    display: none; /* Hide by default */
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
@@ -154,31 +154,31 @@ a.signup:hover {
 }
 
 /* Follow Us Section */
-.follow-us {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    line-height: 0.5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.follow {
+    width: 100%;
+    height: 200px;
 }
 
-.follow-us h1 {
+.follow h2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
     color: #001166;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.follow-us a {
-    margin: 10px;
-    color: #001166;
-    font-size: 24px;
+.follow p {
+    margin-top: 1550px;
+}
+
+.follow li {
+    display: inline;
+}
+
+.follow a {
     text-decoration: none;
-    transition: color 0.3s;
-}
-
-.follow-us a:hover {
-    color: #007bff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: #001166;
 }
 
 /* Footer */
@@ -188,6 +188,8 @@ footer {
 }
 
 .foot {
+    width: 100%;
+    height: 300px;
     margin-top: -600px;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -201,19 +203,23 @@ footer {
 
 .icons {
     margin-left: 80px;
-    margin-top: -250px;
-    padding-left:20px;
+    margin-top: 20px;
+    padding-left: 20px;
 }
-.icons p
-{
-    padding-left:120px;
+
+.icons p {
+    padding-left: 30px;
+    color: #001166;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
 }
 
 .end {
-    background-color: rgba(30, 0, 255, 0.3);
+    background-color: #001166;
     padding: 10px;
     text-align: center;
     margin-top: 10px;
+    color: #ffffff;
 }
 
 /* Location section */
@@ -221,19 +227,84 @@ footer {
     width: 100%;
     height: 450px;
     margin-top: 20px;
-   
 }
-.locat h1
-{
+
+.locat h1 {
     color: #001166;
     font-size: 35px;
-    margin-top: -550px;
     text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
-    font-style: normal;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .service p, .service h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .service-box {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .follow h2, .foot h1, .icons p, .follow a {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .locat h1 {
+        margin-top: 0;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .service-box {
+        width: 40%;
+    }
+
+    .container {
+        padding: 10px 20px;
+    }
+
+    .follow h2, .foot h1 {
+        text-align: center;
+    }
+}
+
+/* Large screens (Desktops) */
+@media screen and (min-width: 1025px) {
+    .service-box {
+        width: 22%;
+    }
+
+    .container {
+        padding: 20px 40px;
+    }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -267,6 +338,15 @@ footer {
 
     .location iframe {
         height: 300px;
+    }
+    .locat h1
+    {
+    color: #001166;
+    font-size: 35px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-style: normal
     }
 }
 
@@ -302,18 +382,25 @@ footer {
 
     .logo img {
         width: 100px;
+        margin-left: -200px;
     }
 
     .brand-info h1 {
         font-size: 20px;
+        margin-left: -100px;
     }
 
     .service-box {
         width: 80%;
     }
-
-    .follow-us a {
-        font-size: 18px;
+    .locat h1
+    {
+    color: #001166;
+    font-size: 35px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+    font-style: normal
     }
 
     .location iframe {
@@ -340,6 +427,7 @@ footer {
 
     .nav-links.active {
         display: flex; /* Show when active */
+
     }
 
     .menu-toggle {
@@ -413,8 +501,7 @@ footer {
             color: #001166;
         }
         
-        .foot {
-           
+        .foot { 
             margin-top: 20px; /* Reduce top margin */
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
@@ -428,30 +515,29 @@ footer {
         }
         
         .end {
-            background-color: rgba(30, 0, 255, 0.3);
+            background-color:#001166;
             padding: 10px;
             text-align: center;
             margin-top: 10px;
         }
         .locat h1 {
-            font-size: 24px;
             margin-top: -40px;
+            color: #001166;
+            font-size: 35px;
             text-align: center;
-            font-family: 'DM Sans';
-            font-weight: 500;
-
-        }
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 800;
+            font-style: normal
+            }
     
         .location iframe {
             height: 300px; /* Reduced height for mobile */
         }
     }
-
-
-
 @media (min-width: 769px) {
     .menu-toggle {
-        display: none; /* Hide hamburger on larger screens */
+        display:flex; /* Hide hamburger on larger screens */
+
     }
     .nav-links li a:hover {
         color: #001166;
@@ -475,12 +561,8 @@ footer {
         }
         
         .web img {
-            margin-left: 3em;
-          
+            margin-left: 3em; 
         }
-
-        
-        
         
         .web h2 {
             text-align: center;
@@ -604,8 +686,7 @@ footer {
             color: #001166;
         }
         
-        .foot {
-           
+        .foot {    
             margin-top: 270px;
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
@@ -615,7 +696,4 @@ footer {
             margin-left: 25px;
         }
 
-
-
-       
     }
