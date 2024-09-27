@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap" 
+    rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins'
+     rel='stylesheet'>
+     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+     <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link rel="stylesheet" href="Signup.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Images/Extol tech solution.png" alt="Logo">
+                <div class="brand-info">
+                    <h1>EXTOL TECH SOLUTION</h1>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#services">SERVICE</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#contact" class="login">LOGIN</a></li>
+                    <li><a href="#contact" class="signup">SIGNUP</a></li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="visme_d" data-title="Untitled Project" data-url="dm1vvy9v-untitled-project?fullPage=true" data-domain="forms" data-full-page="true" data-min-height="100vh" data-form-id="94394"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
