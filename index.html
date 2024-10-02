@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXTOL TECH SOLUTION</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="res.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap" 
@@ -34,6 +34,7 @@
                 <ul class="nav-links">
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#services">SERVICE</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                     <li><a href="#contact" class="login">LOGIN</a></li>
                     <li><a href="#contact" class="signup">SIGNUP</a></li>
@@ -49,9 +50,9 @@
     </header>
     <section>
         <div class="intro">
-            <!-- <div class="text-overlay">
+            <div class="text-overlay">
                 <h1>We're Available to <br> Service You <br> at Anytime</h1>
-            </div> -->
+            </div>
         </div>
     </section>
     <section>
@@ -62,6 +63,7 @@
             <img src="Images/Websiteicon.png" alt="" >
             <h2>WEB DEVELOPMENT</h2>
             <p class="webcon">We provide comprehensive web development services, creating responsive, user-friendly websites designed to meet your business needs. Our focus is on delivering high-performance solutions that enhance user experience across all devices.</p>
+            <div class="sideimg"></div>
         </div>
         <div class="app">
             <img src="Images/Mobile.png" alt="">
@@ -76,7 +78,7 @@
         <div class="digital">
             <img src="Images/Digital icon.png" alt="">
             <h2>DIGITAL MARKETING</h2>
-            <p class="digitalcon">We provide tailored digital marketing solutions to elevate your brand, drive traffic, and grow your business. From SEO to targeted ads, we help you engage the right audience and stay ahead in the digital landscape and grow your business</p>
+            <p class="digitalcon">We provide tailored digital marketing solutions to elevate your brand, drive traffic, and grow your business. From SEO to targeted ads, we help you engage the right audience and stay ahead in the digital landscape.</p>
         </div>
         </div>
     </section>
@@ -99,9 +101,9 @@
             <div class="follow">
                 <h1 style="color: #001166;">Follow Us:</h1>
                 <ul>
-                    <li><a href=""> <i class="fab fa-instagram" style="font-size: 25px; margin-left: 50px; padding: 20px;  color: #001166;"></i>Instagram</a></li>
-                    <li><a href=""> <i class="fab fa-facebook" style="font-size: 25px; margin-left: 50px;  color: #001166;  padding: 20px;"></i>Facebook</a></li>
-                    <li><a href=""> <i class="fa fa-youtube-play" style="font-size:25px; margin-left: 50px;  color: #001166; padding: 20px;"></i>Youtube</a></li>
+                    <li><a href=""> <i class="fab fa-instagram" style="font-size: 25px; margin-left: 0px; padding: 20px;  color: #001166;"></i>Instagram</a></li>
+                    <li><a href=""> <i class="fab fa-facebook" style="font-size: 25px; color: #001166;  padding: 20px;"></i>Facebook</a></li>
+                    <li><a href=""> <i class="fa fa-youtube-play" style="font-size:25px; color: #001166; padding: 20px;"></i>Youtube</a></li>
                 </ul>
     
             </div>
@@ -111,15 +113,17 @@
             <h5>copyrights@2024 Extol Tech Solution,Erode</h5>
         </div>
     </footer>
+0
 
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-    
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-        });
-    </script>
-    
+
+<script>
+    // Toggle menu for mobile view
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
