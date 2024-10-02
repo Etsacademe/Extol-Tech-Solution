@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Global Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,28 +11,41 @@ body {
 }
 
 /* Header */
+header {
+    width: 100%;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: white;
-    padding: 5px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative; /* This will allow easy alignment */
+}
+
+/* Logo and Brand Info */
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
     width: 150px;
     height: auto;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .brand-info h1 {
-    color: #001166;
     font-family: 'League Spartan', sans-serif;
-    margin-left: 20px;
+    color: #001166;
+    font-size: 24px;
 }
 
+/* Adjust the Navigation */
 nav {
     display: flex;
     align-items: center;
@@ -41,6 +54,7 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
+    margin-right: 20px;
 }
 
 .nav-links li {
@@ -51,11 +65,15 @@ nav {
     text-decoration: none;
     color: #001166;
     font-weight: bold;
-    transition: color 0.3s ease-in, border-bottom 0.3s ease-in;
-    font-family: 'League Spartan', sans-serif;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    font-family: 'League Spartan', sans-serif ;
     font-size: 16px;
-    margin-right: 20px;
     text-align: center;
+    
+}
+.nav-links a:hover
+{
+    border-bottom: 2px solid #001166;
 }
 
 a.login, a.signup {
@@ -63,637 +81,394 @@ a.login, a.signup {
     padding: 10px;
     border-radius: 5px;
     color: white;
-    text-align: center;
-}
-
-.nav-links a:hover {
-    color: #001166;
-    border-bottom: 3px solid #001166;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 a.login:hover, a.signup:hover {
     background-color: white;
     color: #001166;
+    border-bottom: 2px solid #001166;
 }
 
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: absolute;
+    right: 20px; /* Aligns the toggle to the right */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically centers the toggle */
 }
 
 .menu-toggle .bar {
     width: 25px;
-    height: 3px;
+    height: 4px;
     background-color: #001166;
-    margin: 4px 8px;
+    margin: 4px 0;
     transition: all 0.3s ease;
 }
 
-/* Responsive intro image */
-.intro img {
+/* Intro Section */
+.intro {
     display: flex;
-    max-width: 100%;
-    max-height: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    background-image: url("Images/bg.jpeg");
+    background-size: cover;
+    /* background-position:left; */
+    height: 400px;
+    position: relative;
 }
 
-/* Service Section */
+/* Text Overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.text-overlay h1 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 4vw;
+    font-weight: 700;
+    color: #ffffff;
+}
 .service {
     width: 100%;
+    min-height: 700px; /* Use min-height for flexibility */
     background-color: white;
-    padding: 50px 20px;
+    padding: 20px;
+    
 }
 
 .service h1 {
     color: #001166;
     font-size: 35px;
+    margin-top: 50px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .service p {
     font-size: 16px;
-    font-family: 'DM Sans';
-    font-weight: 300;
-    text-align: left;
+    font-family: 'DM sans',sans-serif;
+    font-weight: 550;
+    text-align: justify;
     width: 90%;
-    margin-left: 75px;
+    margin: 10px auto; /* Centering text */
     line-height: 1.9;
     color: #001166;
 }
 
-/* Service Box Styling */
-.service-box {
-    width: 15%;
-    height: fit-content;
+/* Service boxes */
+.web{
+    width:40%; /* Default width for medium/large screens */
+    margin-left: 60px;
+    padding: 20px;
+    text-align: center;
+
+}
+.app
+{
+    width: 40%; /* Default width for medium/large screens */
+    margin-left: 660px;
+    margin-top: -305px;
+    padding: 20px;
+    text-align: center;
+}
+.crm
+{
+    width: 45%; /* Default width for medium/large screens */
+    margin-left: 60px;
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+}
+.digital
+{
+    width: 45%; /* Default width for medium/large screens */
     background-color: white;
-    padding: 15px;
-    margin-bottom: 40px;
+    margin-left: 660px;
+    margin-top: -280px;
+    padding: 20px;
     text-align: center;
 }
 
-.service-box img {
-    width: 50%;
+/* Responsive Image Styling */
+.web img, .app img, .crm img, .digital img {
+    margin: 0 auto;
+    width: 80px; /* Fixed size for uniformity */
+    display: block;
     margin-bottom: 15px;
 }
 
-.service-box h2 {
+/* Headings inside the service boxes */
+.web h2, .app h2, .crm h2, .digital h2 {
     color: #001166;
-    font-family: 'DM Sans';
+    font-family: 'League Spartan', sans-serif ;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight:bold;
 }
 
-.service-box p {
-    font-family: 'DM Sans';
-    font-weight: 300;
-    text-align: left;
+.web p, .app p, .crm p, .digital p {
+    font-family: 'League Spartan', sans-serif ;
+    font-weight: 480;
+    text-align: justify;
     line-height: 1.9;
-    font-size: 14px;
+    font-size: 16px;
     color: #001166;
 }
 
-/* Follow Us Section */
-.follow {
-    width: 100%;
-    height: 200px;
+
+/* Flexbox Layout for Service Boxes */
+.service-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 
-.follow h2 {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
-    color: #001166;
-}
-
-.follow p {
-    margin-top: 1550px;
-}
-
-.follow li {
-    display: inline;
-}
-
-.follow a {
-    text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
-    color: #001166;
-}
-
-/* Footer */
-footer {
-    margin-left: -40px;
-    margin-top: -280px;
-}
-
-.foot {
+.locat
+{
     width: 100%;
     height: 300px;
-    margin-top: -600px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
 }
-
-.foot h1 {
-    margin-left: 100px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
-    color: #001166;
-}
-
-.icons {
-    margin-left: 80px;
-    margin-top: 20px;
-    padding-left: 20px;
-}
-
-.icons p {
-    padding-left: 30px;
-    color: #001166;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
-}
-
-.end {
-    background-color: #001166;
-    padding: 10px;
+.locat h1
+{ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
     text-align: center;
-    margin-top: 10px;
-    color: #ffffff;
-}
-
-/* Location section */
-.location iframe {
-    width: 100%;
-    height: 450px;
-    margin-top: 20px;
-}
-
-.locat h1 {
-    color: #001166;
     font-size: 35px;
-    text-align: center;
+    color: #001166;
+}
+.location iframe
+{
+    margin-top: 20px;
+    width: 100%;
+}
+.contact
+{
+    width: 100%;
+    height: 350px;
+    margin-top: 220px;
+}
+.contact h1
+{
+    margin-top: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #001166;
+    padding: 25px;
+}
+.contact .icons
+{
+    font-family: 'DM sans';
+    font-weight: 500;
+    font-size: 16px;
+    color: #001166;
+    margin-left: 50px;
+    line-height: 2.4;
+}
+.follow
+{
+    width: 50%;
+    height: 300px;
+    padding: 20px;
+    margin-left: 750px;
+    margin-top: -338px;
+}
+.follow h1
+{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
+    text-align: center;
+    font-size: 30px;
+    color: #001166;
+    margin-top: 22px;
+    margin-left: -425px;
 }
+.follow ul
+{
+    list-style-type: none;
+   
+}
+.follow a
+{
+    color: #001166;
+    font-family: 'DM sans'; 
+    text-decoration: none;
+    font-size:16px;
+    font-weight: 500;
 
-/* Media Queries */
+}
+.end
+{
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    background-color: #001166;
+    color: white;
+}
+/* Responsive Media Queries */
 
-/* Mobile Devices */
-@media screen and (max-width: 768px) {
+/* Tablets and smaller screens (768px and below) */
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
-        padding: 10px;
+        align-items: center;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .service p, .service h1 {
+        width: 100%;
         text-align: center;
-        margin-left: 0;
-    }
-
-    .service-box {
-        width: 80%;
-        margin: 20px auto;
-    }
-
-    .follow h2, .foot h1, .icons p, .follow a {
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .locat h1 {
-        margin-top: 0;
-    }
-}
-
-/* Tablets */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .service-box {
-        width: 40%;
-    }
-
-    .container {
-        padding: 10px 20px;
-    }
-
-    .follow h2, .foot h1 {
-        text-align: center;
-    }
-}
-
-/* Large screens (Desktops) */
-@media screen and (min-width: 1025px) {
-    .service-box {
-        width: 22%;
-    }
-
-    .container {
-        padding: 20px 40px;
-    }
-}
-
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .brand-info h1 {
-        margin-left: 0;
-    }
-
-    .nav-links {
-        flex-direction: column;
+        margin-top: 20px;
     }
 
     .nav-links li {
         margin: 10px 0;
     }
 
-    .service-box {
-        width: 30%;
-        margin-left: auto;
-        margin-right: auto;
+    .menu-toggle {
+        display: flex; /* Show the toggle button on smaller screens */
     }
+
+    .text-overlay h1 {
+        font-size: 10vw;
+    }
+
+    .web {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+    .app
+    {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+    .crm
+    {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+    .digital
+    {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
 
     .service p {
-        text-align: center;
-        margin-left: 0;
+        width: 95%; /* Adjust width for smaller screens */
     }
 
-    .location iframe {
-        height: 300px;
+    .sideimg {
+        width: 100%;
+        height: auto;
     }
-    .locat h1
+    .locat
     {
-    color: #001166;
-    font-size: 35px;
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 800;
-    font-style: normal
+        width: 100%;
+        height: auto;  
+    }
+    .contact
+    {
+        width: 100%;
+        height: auto;
+        margin-top: -50px;
+    }
+    .follow
+    {
+        width: 100%;
+        height: auto;
+        margin-left: -250px;
     }
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        margin: 0;
-    }
-
-    .service-box {
-        width: 45%;
-    }
-}
-
+/* Mobile screens (480px and below) */
 @media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-
     .logo img {
         width: 100px;
-        margin-left: -200px;
     }
 
     .brand-info h1 {
         font-size: 20px;
-        margin-left: -100px;
     }
 
-    .service-box {
-        width: 80%;
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .text-overlay h1 {
+        font-size: 12vw;
+    }
+
+    .service h1 {
+        font-size: 28px;
+    }
+
+    .service p {
+        font-size: 13px;
+    }
+
+    .web h2, .app h2, .crm h2, .digital h2 {
+        font-size: 24px;
+        font-weight:bold;
+    }
+
+    .web p, .app p, .crm p, .digital p {
+        font-size: 14px;
     }
     .locat h1
     {
-    color: #001166;
-    font-size: 35px;
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 800;
-    font-style: normal
+        text-align: center;
+        font-size: 12vw;
+        color: #001166;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
-    .location iframe {
-        height: 250px;
+    .contact .icons
+    {
+        font-size: 4vw;
+        color: #001166;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .follow 
+    {
+        margin-left: -50px; 
+        margin-top: 2px;  
+    }
+    .follow h1
+    {
+       margin-left: 15px;
+       margin-top: -30px;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .follow li
+    {
+        margin-top: -25px;
     }
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Hide links by default */
-        flex-direction: column; /* Stack vertically */
-        position: absolute;
-        top: 90px; /* Position below the header */
-        left: 0;
-        width: 100%;
-        height: 250px;
-        background-color: white; /* Background for dropdown */
-        z-index: 2;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        padding: 5px;
-        
-    }
-
-    .nav-links.active {
-        display: flex; /* Show when active */
-
-    }
-
-    .menu-toggle {
-        display: flex; /* Show hamburger icon */
-    }
-
-    .nav-links li {
-        margin: 10px 0; /* Space for stacked items */
-        text-align:center; /* Center text */
-    }
-    .nav-links li a:hover {
-        color: #001166;
-        font-family: 'League Spartan', sans-serif ;
-        border-bottom: 3px solid #001166;
-    }
- 
-        .service p {
-            font-size: small; /* Smaller font size on smaller screens */
-            text-align:left; /* Center align text for better visibility */
-            width: 90%; /* Full width on smaller screens */
-            margin-left: 15px; /* No left margin for smaller screens */
-            margin-top: 15px; /* Adjust top margin for better spacing */
-        }
-        .web,
-        .app,
-        .crm,
-        .digital {
-            width: 90%; /* Full width on smaller screens */
-            height: fit-content;
-            background-color: white;
-            margin-left: auto;
-            margin-right: auto; /* Center the containers */
-            margin-top: 20px; /* Adjust top margin */
-            padding: 15px;
-        }
-        
-        .web img,
-        .app img,
-        .crm img,
-        .digital img {
-            margin-left: auto;
-            margin-right: auto; /* Center the images */
-            display: block; /* Center the image block */
-            width: 80%; /* Adjust image size */
-        }
-        
-        .web h2,
-        .app h2,
-        .crm h2,
-        .digital h2 {
-            text-align: center;
-            color: #001166;
-            width: 100%; /* Adjust to full width */
-            margin-left: 0; /* Reset margin */
-            font-size: 18px; /* Smaller font size for mobile */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .web .webcon,
-        .app .appcon,
-        .crm .crmcon,
-        .digital .digitalcon {
-            font-family: 'DM Sans';
-            font-weight: 300;
-            text-align: left;
-            margin-left: 0; /* Reset margin */
-            height: auto; /* Allow content to auto adjust */
-            line-height: 1.7;
-            width: 100%; /* Adjust to full width */
-            font-size: 13px; /* Smaller text for readability */
-            color: #001166;
-        }
-        
-        .foot { 
-            margin-top: 20px; /* Reduce top margin */
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            font-size: 12px; /* Slightly smaller font size */
-            line-height: 1.7; /* Adjust line height */
-            padding-bottom: 15px;
-            margin-left: 40px;
-            margin-right: auto; /* Center the footer */
-            width: 90%; /* Adjust width */
-            margin-top: 350px;
-        }
-        
-        .end {
-            background-color:#001166;
-            padding: 10px;
-            text-align: center;
-            margin-top: 10px;
-        }
-        .locat h1 {
-            margin-top: -40px;
-            color: #001166;
-            font-size: 35px;
-            text-align: center;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 800;
-            font-style: normal
-            }
-    
-        .location iframe {
-            height: 300px; /* Reduced height for mobile */
-        }
-    }
-@media (min-width: 769px) {
-    .menu-toggle {
-        display:flex; /* Hide hamburger on larger screens */
-
-    }
-    .nav-links li a:hover {
-        color: #001166;
-        border-bottom: 3px solid #001166;
-    }
-   
-        .service p {
-            font-size: medium; /* Keep original font size */
-            text-align: justify; /* Left align for larger screens */
-            width: 90%; /* Maintain original width */
-            margin-left: 75px; /* Maintain original left margin */
-            margin-top: 10px; /* Maintain original top margin */
-        }
-        .web {
-            width: 15%;
-            height: fit-content;
-            background-color: white;
-            margin-left: 150px;
-            margin-top: 75px;
-            padding: 15px;
-        }
-        
-        .web img {
-            margin-left: 3em; 
-        }
-        
-        .web h2 {
-            text-align: center;
-            color: #001166;
-            width: 400px;
-            margin-left: -100px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .web .webcon {
-            font-family: 'DM Sans';
-            font-weight: 300;
-            text-align: left;
-            margin-left: -85px;
-            height: 700px;
-            line-height: 1.9;
-            width: 400px;
-            font-size: 14px;
-            color: #001166;
-        }
-        
-        .app {
-            width: 15%;
-            height: fit-content;
-            background-color: white;
-            margin-left: 850px;
-            margin-top: -905px;
-            padding: 15px;
-        }
-        
-        .app img {
-            margin-left: 35px;
-            width: 120px;
-        }
-        
-        .app h2 {
-            text-align: center;
-            color: #001166;
-            width: 400px;
-            margin-left: -96px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .app .appcon {
-            font-family: 'DM Sans';
-            font-weight: 300;
-            text-align: left;
-            margin-left: -85px;
-            height: 700px;
-            line-height: 1.9;
-            width: 400px;
-            font-size: 14px;
-            color: #001166;
-        }
-        
-        .crm {
-            width: 15%;
-            height: fit-content;
-            background-color: white;
-            margin-left: 150px;
-            margin-top: -575px;
-            padding: 15px;
-        }
-        
-        .crm img {
-            margin-left: 50px;
-            width: 50%;
-        }
-        
-        .crm h2 {
-            text-align: center;
-            color: #001166;
-            width: 400px;
-            margin-left: -115px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .crm .crmcon {
-            font-family: 'DM Sans';
-            font-weight: 300;
-            text-align: left;
-            margin-left: -85px;
-            height: 700px;
-            line-height: 1.9;
-            width: 400px;
-            font-size: 14px;
-            color: #001166;
-        }
-        
-        .digital {
-            width: 15%;
-            height: fit-content;
-            background-color: white;
-            margin-left: 850px;
-            margin-top: -855px;
-            padding: 15px;
-        }
-        
-        .digital img {
-            margin-left: 60px;
-            width: 50%;
-        }
-        
-        .digital h2 {
-            text-align: center;
-            color: #001166;
-            width: 400px;
-            margin-left: -100px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        .digital .digitalcon {
-            font-family: 'DM Sans';
-            font-weight: 300;
-            text-align: left;
-            margin-left: -85px;
-            height: 700px;
-            line-height: 1.9;
-            width: 400px;
-            font-size: 14px;
-            color: #001166;
-        }
-        
-        .foot {    
-            margin-top: 270px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            font-size: 14px;
-            line-height:2.5;
-            padding-bottom: 20px;
-            margin-left: 25px;
-        }
-
-    }
+/* Show nav-links when the menu-toggle is clicked (Optional, needs JavaScript) */
+.nav-active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
