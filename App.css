@@ -1,0 +1,1180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* General Styling for the header logo and navigation */
+.header-container {
+    background-color: white;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+h1 {
+    color: #001166;
+    font-family: 'League Spartan', sans-serif;
+    margin-left: 10px; /* Align the text closer to the logo */
+}
+
+/* Navbar Styling */
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: #001166;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.navbar .menu li a:hover {
+    border-bottom: 3px solid #001166;
+}
+
+/* Styling for Login and Signup Buttons */
+.navbar .menu li a.login, .navbar .menu li a.signup {
+    background-color: #001166;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.navbar .menu li a.login:hover, .navbar .menu li a.signup:hover {
+    background-color: white;
+    color: #001166;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+/* Header Image and Text */
+.header-image {
+    position: relative;
+    background-image: url('Image/team-meeting-renewable-energy-project.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3); /* Increased transparency */
+    border-radius: 10px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #001166;
+}
+
+/* Responsive Styles */
+
+/* For Tablets and Smaller Laptops */
+@media (max-width: 1024px) {
+    .header-content {
+        padding: 0 15px;
+    }
+
+    .navbar .menu {
+        gap: 15px;
+    }
+
+    .header-text h1 {
+        font-size: 2.2em;
+    }
+
+    .header-text p {
+        font-size: 1.1em;
+    }
+}
+
+/* For Tablets */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .menu {
+        display: none; /* Hide menu */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
+    .header-text h1 {
+        font-size: 1.8em;
+    }
+
+    .header-text p {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 0.9em;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    .header-image {
+        height: 60vh;
+        background-position: top;
+    }
+
+    .header-text {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    .header-text h1 {
+        font-size: 0.5em;
+    }
+
+    .header-text p {
+        font-size: 0.85em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar .menu {
+        display: none;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+}
+
+/* For Extra Small Mobile Devices */
+@media (max-width: 360px) {
+    .header-image {
+        height: 50vh;
+    }
+
+    .header-text h1 {
+        font-size: 0.5em;
+    }
+
+    .header-text p {
+        font-size: 0.75em;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.85em;
+    }
+}
+
+/* Styling for Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.popup-content label, .popup-content input, .popup-content select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #001166;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+/* More Transparency for Header Image Text */
+.header-text {
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3); /* More transparent */
+    border-radius: 10px;
+}
+
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Change to 90% for smaller screens */
+    max-width: 500px; /* Limit the max width */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for better visibility */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em; /* Ensure text is readable */
+}
+
+button {
+    padding: 10px;
+    background-color: #001166;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* Ensure button text is readable */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .popup-content {
+        margin: 10% auto; /* Adjust margin for smaller screens */
+        width: 95%; /* Make popup wider on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .close {
+        font-size: 24px; /* Adjust close button size */
+    }
+
+    input {
+        font-size: 0.9em; /* Adjust input font size */
+    }
+
+    button {
+        font-size: 0.9em; /* Adjust button font size */
+    }
+}
+
+
+/* Services Overview Section with Cards */
+.services {
+    background: #f9f9f9;
+    padding: 50px 0;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Individual Card Styling */
+.card {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    flex-basis: calc(33.333% - 20px); /* Three cards per row */
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Card Title */
+.card h3 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    color: #001166;
+}
+
+/* Card Description */
+.card p {
+    font-size: 1em;
+    color: #001166;
+    line-height: 1.6;
+    font-family: 'DM sans',sans-serif;
+    font-weight: 550;;
+    text-align: left;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    .services h2 {
+        font-size: 2em; /* Adjust heading size */
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .card-container {
+        padding: 0 15px; /* Add some padding to prevent the cards from touching the screen edges */
+    }
+
+    .card {
+        padding: 15px;
+        margin: 10px 0;
+        flex-basis: 100%; /* Cards take up full width */
+    }
+
+    .card h3 {
+        font-size: 1.2em; /* Adjust card title font size */
+    }
+
+    .card p {
+        font-size: 0.9em; /* Adjust card text size */
+    }
+
+    .services h2 {
+        font-size: 1.8em; /* Adjust heading size for smaller screens */
+    }
+}
+
+/* Extra Small Screens (max-width: 360px) */
+@media (max-width: 360px) {
+    .card {
+        padding: 10px;
+        margin: 8px 0;
+        flex-basis: 100%;
+    }
+
+    .card h3 {
+        font-size: 1.1em; /* Further reduce card title font size */
+    }
+
+    .card p {
+        font-size: 0.85em; /* Adjust card text for extra small screens */
+    }
+
+    .services h2 {
+        font-size: 1.6em; /* Smaller heading for extra small screens */
+    }
+}
+
+
+/* Technologies Section */
+.technologies {
+    padding: 60px 0;
+    background-color: #001166;
+    color: #fff;
+}
+
+.technologies h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Technologies List Layout */
+.technologies-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Technology Item */
+.technologies-list li {
+    display: inline-block;
+    margin: 15px 25px;
+    font-size: 1.4em;
+    text-align: center;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+.technologies-list li img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 100px; /* Increased size */
+    height: 80px; /* Increased size */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.technologies-list li:hover img {
+    transform: scale(1.1);
+}
+
+.technologies-list li:hover {
+    color: #ffd700;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .technologies h2 {
+        font-size: 2.5em;
+        margin-bottom: 40px;
+    }
+
+    .technologies-list li {
+        margin: 10px 20px;
+        font-size: 1.2em;
+    }
+
+    .technologies-list li img {
+        width: 80px; /* Increased size */
+        height: 70px; /* Increased size */
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .technologies h2 {
+        font-size: 2em;
+    }
+
+    .technologies-list {
+        gap: 20px;
+    }
+
+    .technologies-list li {
+        margin: 10px;
+        font-size: 1.1em;
+    }
+
+    .technologies-list li img {
+        width: 70px; /* Increased size */
+        height: 60px; /* Increased size */
+    }
+}
+
+/* Extra Small Screens (max-width: 360px) */
+@media (max-width: 360px) {
+    .technologies h2 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+
+    .technologies-list {
+        gap: 15px;
+    }
+
+    .technologies-list li {
+        margin: 8px;
+        font-size: 1em;
+    }
+
+    .technologies-list li img {
+        width: 60px; /* Increased size */
+        height: 50px; /* Increased size */
+    }
+}
+
+/* Process Workflow Section */
+.process-workflow {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Section Heading */
+.process-workflow h2 {
+    font-size: 2.5em;
+    color: #001166;
+    margin-bottom: 30px;
+}
+
+/* Responsive Process Image */
+.process-image {
+    max-width: 100%; /* Make image responsive */
+    height: auto;    /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+/* Section Paragraph */
+.process-workflow p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .process-workflow h2 {
+        font-size: 2em; /* Adjust heading size for tablets */
+    }
+
+    .process-workflow p {
+        font-size: 1.1em; /* Slightly smaller paragraph text */
+    }
+
+    .process-image {
+        margin-bottom: 15px; /* Adjust space below image */
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .process-workflow h2 {
+        font-size: 1.8em; /* Further reduce heading size for mobile */
+        margin-bottom: 25px; /* Adjust space below heading */
+    }
+
+    .process-workflow p {
+        font-size: 1em; /* Adjust paragraph text size */
+    }
+
+    .process-image {
+        border-radius: 8px; /* Slightly reduce border radius */
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+        margin-bottom: 15px; /* Less margin below the image */
+    }
+}
+
+/* Extra Small Screens (max-width: 360px) */
+@media (max-width: 360px) {
+    .process-workflow h2 {
+        font-size: 1.6em; /* Smaller heading for extra small screens */
+        margin-bottom: 20px; /* Further reduce space below heading */
+    }
+
+    .process-workflow p {
+        font-size: 0.95em; /* Adjust paragraph text size for extra small screens */
+    }
+
+    .process-image {
+        border-radius: 6px; /* Reduce border radius */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+        margin-bottom: 10px; /* Reduce margin below the image */
+    }
+}
+
+/* Portfolio Section */
+.portfolio {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Section Heading */
+.portfolio h2 {
+    font-size: 2.5em;
+    color: #001166;
+    margin-bottom: 30px;
+}
+
+/* Projects Layout */
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+}
+
+/* Individual Project Card */
+.project {
+    width: 30%; /* Three cards per row on larger screens */
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Responsive Project Image */
+.project-image {
+    max-width: 100%; /* Make image responsive */
+    height: auto;    /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+/* Project Title */
+.project h3 {
+    font-size: 1.5em;
+    color: #001166;
+    margin: 10px 0;
+}
+
+/* Project Description */
+.project p {
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .project {
+        width: 45%; /* Two cards per row on tablets */
+        margin: 10px;
+    }
+
+    .portfolio h2 {
+        font-size: 2em; /* Reduce heading size */
+        margin-bottom: 25px;
+    }
+
+    .project h3 {
+        font-size: 1.3em; /* Adjust title size */
+    }
+
+    .project p {
+        font-size: 0.95em; /* Adjust paragraph size */
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .projects {
+        flex-direction: column; /* Stack projects vertically */
+    }
+
+    .project {
+        width: 100%; /* Full width for each project on mobile */
+        margin: 10px 0; /* Add margin between stacked projects */
+    }
+
+    .portfolio h2 {
+        font-size: 1.8em; /* Further reduce heading size */
+        margin-bottom: 20px;
+    }
+
+    .project h3 {
+        font-size: 1.2em; /* Further reduce title size */
+    }
+
+    .project p {
+        font-size: 0.9em; /* Further reduce paragraph size */
+    }
+}
+
+/* Extra Small Screens (max-width: 360px) */
+@media (max-width: 360px) {
+    .portfolio h2 {
+        font-size: 1.6em; /* Smaller heading for extra small screens */
+        margin-bottom: 15px;
+    }
+
+    .project h3 {
+        font-size: 1.1em; /* Smaller title */
+    }
+
+    .project p {
+        font-size: 0.85em; /* Smaller paragraph */
+    }
+
+    .project {
+        padding: 15px; /* Adjust padding for small screens */
+    }
+}
+
+/* Features Section */
+.features {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Section Heading */
+.features h2 {
+    font-size: 2.5em;
+    color: #001166;
+    margin-bottom: 30px;
+}
+
+/* Feature List Layout */
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+}
+
+/* Individual Feature Card */
+.feature {
+    width: 30%; /* Three cards per row on larger screens */
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+
+/* Feature Title */
+.feature h3 {
+    font-size: 1.5em;
+    color: #001166;
+    margin: 10px 0;
+}
+
+/* Feature List */
+.feature ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Feature List Items */
+.feature li {
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Feature Description */
+.feature p {
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .feature {
+        width: 45%; /* Two cards per row on tablets */
+        margin: 10px;
+    }
+
+    .features h2 {
+        font-size: 2em; /* Reduce heading size */
+        margin-bottom: 25px;
+    }
+
+    .feature h3 {
+        font-size: 1.3em; /* Adjust title size */
+    }
+
+    .feature p,
+    .feature li {
+        font-size: 0.95em; /* Adjust text size */
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .feature-list {
+        flex-direction: column; /* Stack features vertically */
+    }
+
+    .feature {
+        width: 100%; /* Full width for each feature on mobile */
+        margin: 10px 0; /* Add margin between stacked features */
+    }
+
+    .features h2 {
+        font-size: 1.8em; /* Further reduce heading size */
+        margin-bottom: 20px;
+    }
+
+    .feature h3 {
+        font-size: 1.2em; /* Further reduce title size */
+    }
+
+    .feature p,
+    .feature li {
+        font-size: 0.9em; /* Further reduce text size */
+    }
+}
+
+/* Extra Small Screens (max-width: 360px) */
+@media (max-width: 360px) {
+    .features h2 {
+        font-size: 1.6em; /* Smaller heading for extra small screens */
+        margin-bottom: 15px;
+    }
+
+    .feature h3 {
+        font-size: 1.1em; /* Smaller title */
+    }
+
+    .feature p,
+    .feature li {
+        font-size: 0.85em; /* Smaller text */
+    }
+
+    .feature {
+        padding: 15px; /* Adjust padding for small screens */
+    }
+}
+
+/* Team Section */
+.team {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Section Heading */
+.team h2 {
+    font-size: 2.5em;
+    color: #001166;
+    margin-bottom: 30px;
+}
+
+/* Team Members Layout */
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+}
+
+/* Individual Team Member Card */
+.team-member {
+    width: 30%; /* Three members per row on larger screens */
+    margin: 15px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Team Member Image */
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 15px;
+}
+
+/* Team Member Name */
+.team-member h3 {
+    font-size: 1.5em;
+    color: #001166;
+    margin: 10px 0;
+}
+
+/* Team Member Description */
+.team-member p {
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .team-member {
+        width: 45%; /* Two members per row on tablets */
+        margin: 10px; /* Reduced margin */
+    }
+
+    .team h2 {
+        font-size: 2em; /* Reduce heading size */
+        margin-bottom: 25px;
+    }
+
+    .team-member h3 {
+        font-size: 1.3em; /* Adjust name size */
+    }
+
+    .team-member p {
+        font-size: 0.95em; /* Adjust text size */
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .team-members {
+        flex-direction: column; /* Stack team members vertically */
+        align-items: center; /* Center alignment */
+    }
+
+    .team-member {
+        width: 100%; /* Full width for each member on mobile */
+        margin: 10px 0; /* Space between stacked members */
+    }
+
+    .team h2 {
+        font-size: 1.8em; /* Further reduce heading size */
+        margin-bottom: 20px;
+    }
+
+    .team-member h3 {
+        font-size: 1.2em; /* Further reduce name size */
+    }
+
+    .team-member p {
+        font-size: 0.9em; /* Further reduce text size */
+    }
+}
+
+/* Extra Small Screens (max-width: 360px) */
+@media (max-width: 360px) {
+    .team h2 {
+        font-size: 1.6em; /* Smaller heading for extra small screens */
+        margin-bottom: 15px;
+    }
+
+    .team-member h3 {
+        font-size: 1.1em; /* Smaller name */
+    }
+
+    .team-member p {
+        font-size: 0.85em; /* Smaller text */
+    }
+
+    .team-member {
+        padding: 15px; /* Adjust padding for small screens */
+    }
+}
+
+/* Contact Section */
+.contact {
+    background: #001166; /* Background color */
+    color: #fff; /* Text color */
+    padding: 50px 0; /* Padding for top and bottom */
+    text-align: center; /* Center-align text */
+    animation: fadeInUp 1s ease-out; /* Animation on load */
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start transparent */
+        transform: translateY(50px); /* Start shifted down */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End in original position */
+    }
+}
+
+/* Links in the contact section */
+.contact a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for links */
+.contact a:hover {
+    color: #ffd700; /* Change color on hover */
+}
+
+/* Responsive Design */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px 20px; /* Reduce padding on smaller screens */
+    }
+
+    .contact h2 {
+        font-size: 2.2em; /* Adjust heading size */
+    }
+
+    .contact p {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+}
+
+/* Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .contact {
+        padding: 30px 15px; /* Further reduce padding */
+    }
+
+    .contact h2 {
+        font-size: 1.8em; /* Smaller heading */
+    }
+
+    .contact p {
+        font-size: 0.9em; /* Smaller paragraph */
+    }
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    display: none; /* Hidden by default */
+    background-color: #001166; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for the button */
+#back-to-top:hover {
+    background-color: #001170; /* Change background on hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #back-to-top {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Slightly smaller font size */
+    }
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center align text */
+}
+
+/* Social Media Links */
+footer .social-media {
+    margin-top: 10px; /* Space above social media section */
+}
+
+footer .social-media a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between links */
+    font-size: 1.2em; /* Font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+footer .social-media a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #ffd700; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0; /* Reduced padding on smaller screens */
+    }
+    
+    footer .social-media a {
+        font-size: 1em; /* Smaller font size on mobile */
+    }
+}

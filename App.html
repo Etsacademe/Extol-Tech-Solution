@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IT Services & App Development</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+<!-- Header Section -->
+<header class="header-container">
+    <div class="header-content">
+        <div class="logo">
+            <img src="Images/Extol tech solution.png" alt="Logo">
+        </div>
+        <h1>EXTOL TECH SOLUTION</h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login" class="login">Login</a></li>
+                <li><a href="#signup" class="signup">Sign Up</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Menu Icon -->
+        </nav>
+    </div>
+</header>
+
+<!-- Header Image and Text Section -->
+<div class="header-image">
+    <div class="header-text">
+        <!-- <h1>Welcome to EXTOL TECH SOLUTIONS</h1>
+        <p>Your partner in technology solutions</p>
+        <a href="#" class="btn" onclick="openPopup()">Get Started</a> -->
+    </div>
+</div>
+
+<!-- Popup Form for Get Started Button -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>Get Started</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" required>
+            
+            <label for="service">Select Service:</label>
+            <select id="service" name="service" required>
+                <option value="web-development">Web Development</option>
+                <option value="app-development">App Development</option>
+                <option value="digital-marketing">Digital Marketing</option>
+                <option value="it-support">IT Support</option>
+                <!-- Add more services as needed -->
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <span class="close" onclick="closePopup()">&#10006;</span>
+    </div>
+</div>
+
+<!-- Services Overview Section with Cards -->
+<section class="services">
+    <div class="container">
+        <h2>Next-Gen App Creation</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Mobile App Development</h3>
+                <p>We build innovative, user-friendly apps for both iOS and Android platforms, helping you reach a wider audience.</p>
+            </div>
+            <div class="card">
+                <h3>Web App Development</h3>
+                <p>Our responsive web applications ensure seamless user experience across all devices, boosting user engagement.</p>
+            </div>
+            <div class="card">
+                <h3>Cross-Platform App Development</h3>
+                <p>With Flutter and React Native, we develop apps that work flawlessly across different platforms with a single codebase.</p>
+            </div>
+            <div class="card">
+                <h3>Progressive Web Apps (PWA)</h3>
+                <p>We build PWAs that provide the feel of a native app with the power of a website, optimized for speed and accessibility.</p>
+            </div>
+            <div class="card">
+                <h3>MVP Development for Startups</h3>
+                <p>We help startups develop their Minimum Viable Product (MVP) quickly and cost-effectively to validate their business ideas.</p>
+            </div>
+            <div class="card">
+                <h3>Custom Software Development</h3>
+                <p>We provide tailored software solutions designed to meet the unique needs of your business, ensuring scalability and flexibility for future growth.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Technologies Section -->
+<section class="technologies">
+    <div class="container">
+        <h2>Technology Behind the Magic</h2>
+        <ul class="technologies-list">
+            <li>
+                <img src="Image/flutter.png" alt="Flutter Logo" width="50" height="50">
+                Flutter
+            </li>
+            <li>
+                <img src="Image/react.png" alt="React Native Logo" width="50" height="50">
+                React Native
+            </li>
+            <li>
+                <img src="Image/swift.png" alt="Swift Logo" width="50" height="50">
+                Swift
+            </li>
+            <li>
+                <img src="Image/java.png" alt="Java Logo" width="50" height="50">
+                Java
+            </li>
+            <li>
+                <img src="Image/Kotlin.png" alt="Kotlin Logo" width="50" height="50">
+                Kotlin
+            </li>
+            <li>
+                <img src="Image/python.png" alt="Python Logo" width="50" height="50">
+                Python
+            </li>
+            <li>
+                <img src="Image/nodejs.png" alt="Node.js Logo" width="50" height="50">
+                Node.js
+            </li>
+            <li>
+                <img src="Image/html.png" alt="HTML/CSS Logo" width="50" height="50">
+                HTML/CSS
+            </li>
+            <li>
+                <img src="Image/csharp.png" alt="C# Logo" width="50" height="50">
+                C#
+            </li>
+            <li>
+                <img src="Image/Php.webp" alt="PHP Logo" width="50" height="50">
+                PHP
+            </li>
+            <li>
+                <img src="Image/c++.png" alt="C++ Logo" width="50" height="50">
+                C++
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+   <!-- Process/Workflow Section with a Single Image -->
+<section class="process-workflow">
+    <div class="container">
+        <h2>Our Crafting Approach</h2>
+        <img src="Image/mobile-development-process.png" alt="Development Process" class="process-image">
+        <p>Our streamlined process ensures that every step, from Discovery to Maintenance, is handled with care and precision.</p>
+    </div>
+</section>
+
+<!-- Portfolio/Case Studies Section -->
+<section class="portfolio">
+    <div class="container">
+        <h2>Creative Solutions Showcase</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="Image/project1-screenshot.jpg" alt="Project 1" class="project-image">
+                <h3>Project Title 1</h3>
+                <p><strong>Challenge:</strong> Brief description of the challenge faced.</p>
+                <p><strong>Solution:</strong> Summary of the solution implemented.</p>
+                <p><strong>Outcome:</strong> Description of results, including metrics like increased downloads or revenue growth.</p>
+                <p><strong>Client Testimonial:</strong> "This project transformed our business!" - Client Name</p>
+            </div>
+            <div class="project">
+                <img src="images/project2-screenshot.jpg" alt="Project 2" class="project-image">
+                <h3>Project Title 2</h3>
+                <p><strong>Challenge:</strong> Brief description of the challenge faced.</p>
+                <p><strong>Solution:</strong> Summary of the solution implemented.</p>
+                <p><strong>Outcome:</strong> Description of results, including metrics like increased downloads or revenue growth.</p>
+                <p><strong>Client Testimonial:</strong> "A fantastic experience working with this team!" - Client Name</p>
+            </div>
+            <div class="project">
+                <img src="images/project3-screenshot.jpg" alt="Project 3" class="project-image">
+                <h3>Project Title 3</h3>
+                <p><strong>Challenge:</strong> Brief description of the challenge faced.</p>
+                <p><strong>Solution:</strong> Summary of the solution implemented.</p>
+                <p><strong>Outcome:</strong> Description of results, including metrics like increased downloads or revenue growth.</p>
+                <p><strong>Client Testimonial:</strong> "This project exceeded our expectations!" - Client Name</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features & Capabilities Section -->
+<section class="features">
+    <div class="container">
+        <h2>Features & Capabilities</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <h3>Custom Features Development</h3>
+                <ul>
+                    <li>E-commerce integration</li>
+                    <li>Payment gateways</li>
+                    <li>Real-time chat</li>
+                    <li>Push notifications</li>
+                    <li>Geolocation services</li>
+                    <li>Social media integration</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <h3>Scalability</h3>
+                <p>Our applications are built to scale seamlessly as your business grows, ensuring smooth performance under increased load.</p>
+            </div>
+            <div class="feature">
+                <h3>Security & Compliance</h3>
+                <p>We prioritize data security, adhering to GDPR compliance and industry standards to protect your valuable information.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team/Expertise Section -->
+<section class="team">
+    <div class="container">
+        <h2>The Faces of Innovation</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="team-member1.jpg" alt="John Doe">
+                <h3>John Doe</h3>
+                <p>Lead Developer</p>
+                <p>Google-certified developer with 8+ years of experience in mobile and web app development.</p>
+            </div>
+            <div class="team-member">
+                <img src="team-member2.jpg" alt="Jane Smith">
+                <h3>Jane Smith</h3>
+                <p>UI/UX Designer</p>
+                <p>Specializes in user-centered design with 5+ years of experience in crafting seamless interfaces.</p>
+            </div>
+            <div class="team-member">
+                <img src="team-member3.jpg" alt="Michael Lee">
+                <h3>Michael Lee</h3>
+                <p>Project Manager</p>
+                <p>Certified Scrum Master with 10 years of experience in delivering projects on time and within budget.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: contact@example.com</p>
+            <p>Phone: +123 456 789</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 IT Services & App Development. All Rights Reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        function toggleMenu() {
+    const menu = document.querySelector('.navbar .menu');
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+        menu.style.flexDirection = 'column'; /* Stack vertically */
+    }
+}
+
+function openPopup() {
+    document.getElementById('popup').style.display = 'flex'; 
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+
+       // Show or hide the button based on scroll position
+window.onscroll = function() {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = 'block'; // Show the button
+    } else {
+        backToTopButton.style.display = 'none'; // Hide the button
+    }
+};
+
+// Scroll to top when button is clicked
+document.getElementById('back-to-top').onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+};
+    </script>
+</body>
+</html>
+
