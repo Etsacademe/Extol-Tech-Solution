@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- [Existing head content as provided by you] -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EXTOL TECH SOLUTION</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 
-  <!-- Font -->
+    <!-- Font Imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Roboto:wght@400;500;700&display=swap" 
     rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Poppins'
-     rel='stylesheet'>
-     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
-     <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
-     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-   
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header with Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Brand -->
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="Images/Extol tech solution.png" alt="Logo" class="logo img-fluid me-2" width="15%">
                 <div>
@@ -36,11 +34,17 @@
                     <p class="mb-0">Technology Provides New Energy</p>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style=" color: #0615BF;"></span>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <!-- [Your navigation items as provided] -->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">HOME</a>
                     </li>
@@ -53,11 +57,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">FEEDBACK</a>
                     </li>
+                    <!-- ... other nav items ... -->
                     <li class="nav-item">
-                        <a class="nav-link-login" href="#">LOGIN</a>
+                        <a class="nav-link-login btn btn-primary me-2 mt-2 mt-lg-0" href="#">LOGIN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link-signup" href="#">SIGN-UP</a>
+                        <a class="nav-link-signup btn btn-primary mt-2 mt-lg-0" href="#">SIGN-UP</a>
                     </li>
                 </ul>
             </div>
@@ -96,10 +101,10 @@
                 <!-- 2nd Service (Top Right) -->
                 <div class="col-md-5">
                     <div class="service-box">
-                        <div class="icon">
-                            <img src="Images/Mobile.png" alt="App Icon">
+                        <div class="iconapp">
+                            <img src="Images/App.png" alt="App Icon">
                         </div>
-                        <h4><a href="" style="text-decoration: none; color: #0615BF;">App Development</a></h4>
+                        <h4><a href="App.html" style="text-decoration: none; color: #001166;">App Development</a></h4>
                         <p>We provide customized app development solutions designed to elevate your business operations and enhance customer experiences. Our team delivers intuitive, scalable, and high-performance applications tailored to your specific needs.</p>
                     </div>
                 </div>
@@ -119,7 +124,7 @@
                 <div class="col-md-5">
                     <div class="service-box">
                         <img src="Images/Digital icon.png" alt="Digital">
-                        <h4>Digital Marketing</h4>
+                        <h4><a href="Digital.html" style="text-decoration: none; color: #001166;">Digital Marketing</a></h4>
                         <p class="digitalcon">We provide tailored digital marketing solutions to elevate your brand, drive traffic, and grow your business. From SEO to targeted ads, we help you engage the right audience and stay ahead in the digital landscape and grow your business</p>
                     </div>
                 </div>
@@ -136,28 +141,43 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.8686033440413!2d77.71541387378326!3d11.344306748465021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96f39bfda7a5d%3A0xd6aa06a947bbe856!2sExtol%20Tech%20Solution!5e0!3m2!1sen!2sin!4v1727264993114!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <div class="row text-center mt-5">
+        <div class="row text-center mt-5" >
             <div class="col-md-4">
-                <h3>CONTACT US</h3>
+                <h3>Contact us</h3>
                 <div class="con">
                 <p>
-                    <p><i class="fa fa-map-marker"></i>Extol Tech Solution<br>159,Amman Complex 2nd Floor,Mettur Main Road,<br>Erode. <br></p>
-                    <p><i class="fa fa-phone" style="font-size:25px; color:#0615BF; text-align: center;"></i> 0424 4031055</p>
-                    <p><i class="fa fa-phone" style="font-size:25px; color:#0615BF; text-align: center;"></i> +91 9087179955,+91 8675288978</p>
-                    <p><i class="fa fa-envelope" style="font-size:25; color:#0615BF; text-align: center;"></i> centrehead@etsacademy.net, etsacademyerode@gmail.com</p>
+                    <p><i class="fa fa-map-marker" style="font-size:25px; color:#001166;"></i><strong style="font-size: 18px;">Extol Tech Solution</strong><br>159,Amman Complex 2nd Floor,Mettur Main Road,<br>Erode. <br></p>
+                    <p><i class="fa fa-phone" style="font-size:25px; color:#001166; text-align: center;"></i> 0424 4031055</p>
+                    <p><i class="fa fa-phone" style="font-size:25px; color:#001166; text-align: center;"></i> +91 9087179955,+91 8675288978</p>
+                    <p><i class="fa fa-envelope" style="font-size:25; color:#001166; text-align: center;"></i> centrehead@etsacademy.net, etsacademyerode@gmail.com</p>
                 </p>
             </div>
             </div>
             <div class="col-md-4">
-                <h3>FOLLOW US</h3>
-                <div class="social-icons" style="margin-left: -250px;">
+                <h3>Follow us</h3>
+                <div class="social-icons" style="margin-left: -200px;">
                     <a href="#"><i class="bi bi-instagram"></i></a>
                     <a href="#"><i class="bi bi-whatsapp"></i></a>
                     <a href="#"><i class="bi bi-facebook"></i></a>
                 </div>
+            </div> <div class="col-md-4">
+                <h3>Quick Links</h3>
+                <div class="navmenu">
+                   <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Our Service</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Feedback</a></li>
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Signup</a></li>
+                   </ul>
+                </div>
             </div>
         </div>
     </section>
+    <footer>
+        <h6 style="text-align: center; padding: 5px; color: white; background-color: #001166;  font-family: 'League Spartan', sans-serif;">@copyrights@2024 Extol Tech Solution ,Erode</h6>
+    </footer>
 
     <!-- Bootstrap JS and custom JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
